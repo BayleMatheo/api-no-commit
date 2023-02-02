@@ -2,16 +2,6 @@ html {
     background-color: #ac52be;
   }
 
-  
-  body {
-    width: 1080px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #ceccc9;
-    padding: 0 20px 20px 20px;
-    border: 5px solid rgb(0, 0, 0);
-    border-radius: 1rem;
-  }
 
   .artist {
     width: 20%;
@@ -29,7 +19,7 @@ html {
   .image {
     width: 75%;
     height: 75%;
-    border: 0.25rem dashed #ac52be;
+    border: 0.25rem inset #ac52be;
     border-radius: 20%;
   }
 
@@ -54,9 +44,34 @@ html {
 
   .MainTitle{
     font-family:  "Concert One", sans-serif;
+    font-size: 75px;
+
   }
 
   .ArtisteName {
     font-family: "Concert One", sans-serif;
   }
   
+  .MusiqueClignotement  {
+    animation-duration: .8s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+ }
+
+ @keyframes clignoter {
+   0%   { opacity:1; }
+   40%   {opacity:0; }
+   100% { opacity:1; }
+ }
+
+ .main {
+  width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ceccc9;
+  padding: 0 20px 20px 20px;
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 1rem;
+  margin-top: 0px;
+ }

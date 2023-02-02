@@ -7,10 +7,10 @@
     <title>Artist</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Concert+One&effect=neon">
     <link href="../css/artists.css" rel="stylesheet" media="all" type="text/css">
-
+    <link rel="icon" href="../css/icon.png" type="image/png">
   </head>
+  
   <body>
-    <div class="container">
       <div class="profile">
         <h1 class="profile__name">{{.Name}}</h1>
         <div class="profile__info">
@@ -24,7 +24,6 @@
               <i>{{.FirstAlbum}}</i>
             </p>
           </h2>
-
           <h2 class="name">
             Members {{range .Members}}
             <p class="member">
@@ -51,6 +50,5 @@
           </div>
         </div>
       </div>
-    </div>
   </body>
 </html>
