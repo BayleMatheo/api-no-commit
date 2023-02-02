@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist</title>
+    <link rel="stylesheet" href="/css/artists.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile">
+        <h1 class="profile__name">{{.Name}}</h1>
+        <div class="profile__info">
+          <img src="{{.Image}}" alt="Artist Image" class="image" />
+          <h2 class="name" style="font-size: 2.6rem; font-weight: 100">
+            <i>EST. {{.CreationDate}}</i>
+          </h2>
+          <h2 class="name">
+            First album
+            <p style="margin: 0; font-size: 1.75rem; font-weight: 100">
+              <i>{{.FirstAlbum}}</i>
+            </p>
+          </h2>
+
+          <h2 class="name">
+            Members {{range .Members}}
+            <p style="margin: 0.3rem; font-size: 1.75rem; font-weight: 100">
+              <i>{{.}}</i>
+            </p>
+            {{end}}
+          </h2>
+        </div>
+        <div class="empty"></div>
+        <div class="concerts name">
+          <h2>Concert Locations</h2>
+          {{range $i, $e := .Relations}}
+          <h3>
+            {{$i}}
+            <p style="margin: 0.3rem; font-size: 1.75rem; font-weight: 100">
+              <i>{{index $e 0}}</i>
+            </p>
+          </h3>
+          {{end}}
+          <div>
+            <a href="/" style="text-decoration: none">
+              <button class="button" type="button">Back</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

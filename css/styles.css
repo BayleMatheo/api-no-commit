@@ -1,0 +1,50 @@
+html {
+    background-color: #ac52be;
+  }
+
+  
+  body {
+    width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ceccc9;
+    padding: 0 20px 20px 20px;
+    border: 5px solid rgb(0, 0, 0);
+  }
+
+  .artist {
+    width: 25rem;
+    display: inline-block;
+    text-align: center;
+    padding: 1rem;
+    margin: auto;
+  }
+
+  .all {
+    display: inline-block;
+  }
+
+  .image {
+    border: 0.25rem dashed #ac52be;
+    border-radius: 20%;
+  }
+
+  .name {
+    text-shadow: 0.2rem 0.2rem 0.2rem #ac52be;
+  }
+
+  .members {
+    display: inline-block;
+    /* place it at the top */
+    vertical-align: top;
+  }
+
+  .image:hover {
+    border: 0.2rem solid #fff;
+    -moz-box-shadow: 0rem 0.6rem 0.5rem #ac52be;
+    -webkit-box-shadow: 0rem 0.6rem 0.5rem #ac52be;
+    box-shadow: 0.2rem 0.6rem 0.5rem #ac52be;
+    -moz-border-radius: 25%;
+    -webkit-border-radius: 25%;
+    border-radius: 25%;
+  }

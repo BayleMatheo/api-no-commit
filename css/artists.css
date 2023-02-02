@@ -1,0 +1,64 @@
+html {
+  background-color: #ac52be;
+}
+
+
+body {
+  width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ceccc9;
+  padding: 0 20px 20px 20px;
+  border: 5px solid rgb(0, 0, 0);
+}
+  
+  .profile {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    background-color: rgb(141, 78, 218);
+    border-radius: 3rem;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .profile__name {
+    opacity: 1;
+    font-size: 6rem;
+    font-weight: 700;
+    text-shadow: 0.2rem 0.2rem 0.2rem #cb22c3;
+    margin-top: 2rem;
+  }
+  
+  
+  .members {
+    display: inline-block;
+  }
+  
+  .profile__info {
+    float: left;
+    opacity: 1;
+  }
+  
+  .image {
+    border: 0.2rem solid #fff;
+    -moz-box-shadow: 0rem 0.6rem 0.5rem #cb22c3;
+    -webkit-box-shadow: 0rem 0.6rem 0.5rem #cb22c3;
+    box-shadow: 0.2rem 0.6rem 0.5rem #cb22c3;
+    -moz-border-radius: 25%;
+    -webkit-border-radius: 25%;
+    border-radius: 25%;
+  }
+  .concerts {
+    display: inline-block;
+    margin: 1.6rem;
+    margin-top: -2rem;
+  }
+  
+  .empty {
+    display: inline-block;
+  }
+  .button{
+    border: 0.25rem dashed #ac52be;
+    border-radius: 20%;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../css/styles.css" rel="stylesheet" media="all" type="text/css">
+    <title>GroupieTracker</title>
+  </head>
+  <body>
+    <h1>API Groupie Tracker</h1>
+    {{ range $artists := . }}
+    <div class="artist">
+      <h2> {{ .Name }}</h2>
+      <a href="artists?id={{ .Id }}">
+      <img src="{{ .Image }}"    alt="picture of the artists album" class="image"/>
+    </a>
+    </div>
+  {{ end }}
+  </body>
+</html>
