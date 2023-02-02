@@ -14,7 +14,8 @@ html {
   }
 
   .artist {
-    width: 25rem;
+    width: 20%;
+    height: 20%;
     display: inline-block;
     text-align: center;
     padding: 1rem;
@@ -26,6 +27,8 @@ html {
   }
 
   .image {
+    width: 75%;
+    height: 75%;
     border: 0.25rem dashed #ac52be;
     border-radius: 20%;
   }
@@ -36,7 +39,6 @@ html {
 
   .members {
     display: inline-block;
-    /* place it at the top */
     vertical-align: top;
   }
 
