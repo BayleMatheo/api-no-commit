@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="../css/styles.css" rel="stylesheet" media="all" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Concert+One">
     <title>GroupieTracker</title>
   </head>
   <body>
-    <h1>API Groupie Tracker</h1>
+    <h1 class="MainTitle">API Groupie Tracker</h1>
     {{ range $artists := . }}
     <div class="artist">
-      <h2> {{ .Name }}</h2>
+      <h2 class="ArtisteName"> {{ .Name }}</h2>
       <a href="artists?id={{ .Id }}">
       <img src="{{ .Image }}"    alt="picture of the artists album" class="image"/>
     </a>

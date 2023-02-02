@@ -48,3 +48,11 @@ html {
     -webkit-border-radius: 25%;
     border-radius: 25%;
   }
+
+  .MainTitle{
+    font-family:  "Concert One", sans-serif;
+  }
+
+  .ArtisteName {
+    font-family: "Concert One" , sans-serif;
+  }
