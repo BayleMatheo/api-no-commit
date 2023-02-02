@@ -10,6 +10,8 @@ body {
   background-color: #ceccc9;
   padding: 0 20px 20px 20px;
   border: 5px solid rgb(0, 0, 0);
+  border-radius: 1rem;
+  font-family: "Concert One", serif;
 }
   
   .profile {
@@ -28,11 +30,16 @@ body {
     font-weight: 700;
     text-shadow: 0.2rem 0.2rem 0.2rem #cb22c3;
     margin-top: 2rem;
+    font-family: "Concert One", serif;
+    
   }
   
   
   .members {
     display: inline-block;
+    margin: 0.3rem; 
+    font-size: 1.75rem; 
+    font-weight: 100
   }
   
   .profile__info {
@@ -61,4 +68,25 @@ body {
   .button{
     border: 0.25rem dashed #ac52be;
     border-radius: 20%;
+}
+
+.name {
+  font-size: 2.6rem; 
+  font-weight: 100;
+}
+
+.FirstAlbum {
+  margin: 0; 
+  font-size: 1.75rem; 
+  font-weight: 100
+}
+
+.index {
+  margin: 0.3rem; 
+  font-size: 1.75rem; 
+  font-weight: 100
+}
+
+.ref {
+  text-decoration: none
 }

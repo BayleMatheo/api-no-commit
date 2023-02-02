@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artist</title>
-    <link rel="stylesheet" href="/css/artists.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Concert+One&effect=neon">
+    <link href="../css/artists.css" rel="stylesheet" media="all" type="text/css">
+
   </head>
   <body>
     <div class="container">
@@ -13,19 +15,19 @@
         <h1 class="profile__name">{{.Name}}</h1>
         <div class="profile__info">
           <img src="{{.Image}}" alt="Artist Image" class="image" />
-          <h2 class="name" style="font-size: 2.6rem; font-weight: 100">
+          <h2 class="name">
             <i>EST. {{.CreationDate}}</i>
           </h2>
           <h2 class="name">
             First album
-            <p style="margin: 0; font-size: 1.75rem; font-weight: 100">
+            <p class="FirstAlbum">
               <i>{{.FirstAlbum}}</i>
             </p>
           </h2>
 
           <h2 class="name">
             Members {{range .Members}}
-            <p style="margin: 0.3rem; font-size: 1.75rem; font-weight: 100">
+            <p class="member">
               <i>{{.}}</i>
             </p>
             {{end}}
@@ -37,13 +39,13 @@
           {{range $i, $e := .Relations}}
           <h3>
             {{$i}}
-            <p style="margin: 0.3rem; font-size: 1.75rem; font-weight: 100">
+            <p class="index">
               <i>{{index $e 0}}</i>
             </p>
           </h3>
           {{end}}
           <div>
-            <a href="/" style="text-decoration: none">
+            <a href="/" class="ref">
               <button class="button" type="button">Back</button>
             </a>
           </div>
