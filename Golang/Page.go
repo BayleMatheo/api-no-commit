@@ -1,6 +1,7 @@
 package Groupie
 
 import (
+	"fmt"
 	"html/template"
 	"net/http"
 )
@@ -19,5 +20,6 @@ func Artists(w http.ResponseWriter, r *http.Request) {
 	artist := getArtists(Id)
 	// fmt.Println(d)
 	tmpl := template.Must(template.ParseFiles("./templates/artists.html"))
+	fmt.Println(artist)
 	tmpl.Execute(w, artist)
 }
