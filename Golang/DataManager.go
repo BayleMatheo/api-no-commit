@@ -2,6 +2,7 @@ package Groupie
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -42,44 +43,48 @@ func getArtists(Id string) rawArtist {
 	return artist
 }
 
-func getDates() rawDates {
-	dates := rawDates{}
-	getData("https://groupietrackers.herokuapp.com/api/dates", &dates)
-	return dates
-}
+// func getDates() rawDates {
+// 	dates := rawDates{}
+// 	getData("https://groupietrackers.herokuapp.com/api/dates", &dates)
+// 	return dates
+// }
 
-func getLocations() rawLocations {
-	locations := rawLocations{}
-	getData("https://groupietrackers.herokuapp.com/api/locations", &locations)
-	return locations
-}
+// func getLocations() rawLocations {
+// 	locations := rawLocations{}
+// 	getData("https://groupietrackers.herokuapp.com/api/locations", &locations)
+// 	return locations
+// }
 
-func getRelations() rawRelations {
+func getRelations(Id string) rawRelation {
 	// Initalize to store the raw data
-	relations := rawRelations{}
-	getData("https://groupietrackers.herokuapp.com/api/relation", &relations)
+	relation := rawRelation{}
+	getData("https://groupietrackers.herokuapp.com/api/relation/"+Id, &relation)
 	// Convert the names to the correct format
 	// EX: "los_angeles-usa" -> "Los Angeles, USA"
-	marshalledRelations, _ := json.Marshal(relations.Index)
+	marshalledRelations, err := json.Marshal(relation)
+	if err != nil {
+		panic(err)
+	}
 	marshalledRelations = []byte(
 		Title(
 			strings.ReplaceAll(
 				strings.ReplaceAll(
 					string(marshalledRelations), "_", " "), "-", ", ")))
 	// Reset to avoid duplicates when unmarshalling
-	relations = rawRelations{}
-	json.Unmarshal(marshalledRelations, &relations.Index)
-
-	// Convert the dates to the correct format
-	for i := 0; i < len(relations.Index); i++ {
-		for location, dates := range relations.Index[i].DatesLocations {
-			// Convert the dates to the correct format
-			// EX: "2019-01-01" -> "January 1, 2019"
-			for dateIndex, date := range dates {
-				relations.Index[i].DatesLocations[location][dateIndex] = Date(date)
-			}
-		}
+	relation = rawRelation{}
+	err = json.Unmarshal(marshalledRelations, &relation)
+	if err != nil {
+		panic(err)
 	}
 
-	return relations
+	// Convert the dates to the correct format
+	for location, dates := range relation.DatesLocations {
+		// Convert the dates to the correct format
+		// EX: "2019-01-01" -> "January 1, 2019"
+		for dateIndex, date := range dates {
+			relation.DatesLocations[location][dateIndex] = Date(date)
+		}
+	}
+	fmt.Println(relation)
+	return relation
 }

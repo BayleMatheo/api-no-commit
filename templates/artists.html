@@ -35,11 +35,10 @@
         <div class="empty"></div>
         <div class="concerts name">
           <h2>Concert Locations</h2>
-          {{range $i, $e := .Relations}}
+          {{range $i, $e := .DatesLocations}}
           <h3>
-            {{$i}}
             <p class="index">
-              <i>{{index $e 0}}</i>
+              <i>{{$i}} the {{index $e 0}}</i>
             </p>
           </h3>
           {{end}}

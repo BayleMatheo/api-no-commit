@@ -18,8 +18,10 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 func Artists(w http.ResponseWriter, r *http.Request) {
 	Id := r.URL.Query().Get("id")
 	artist := getArtists(Id)
+	artist.DatesLocations = getRelations(Id).DatesLocations
 	// fmt.Println(d)
 	tmpl := template.Must(template.ParseFiles("./templates/artists.html"))
 	fmt.Println(artist)
 	tmpl.Execute(w, artist)
+	fmt.Println("Here :", artist.DatesLocations)
 }

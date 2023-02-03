@@ -13,8 +13,6 @@ func main() {
 	http.Handle("/css/", http.StripPrefix("/css/", fs))
 	http.HandleFunc("/", g.HomeHandler)
 	http.HandleFunc("/artists", g.Artists)
-
 	fmt.Println("(http://localhost:8080) - Server started on port", port)
 	http.ListenAndServe("localhost"+port, nil)
-
 }

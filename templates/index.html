@@ -13,7 +13,19 @@
     <div class="Head">
       <h1 class="MainTitle">API Groupie Tracker</h1>
       <p class="MusiqueClignotement">𝅘𝅥𝅯𝄞𝅘𝅥𝄞𝅘𝅥𝅯𝅘𝅥𝅘𝅥𝅯𝅘𝅥𝄢𝅘𝅥𝅯𝄞𝅘𝅥𝄞𝅘𝅥𝅯𝅘𝅥𝅘𝅥𝅯𝄞𝅘𝅥𝅯𝅘𝅥𝅯𝅘𝅥𝅘𝅥𝅯𝅘𝅥𝅱𝅘𝅥𝅯𝄢𝅘𝅥𝅯𝅘𝅥𝄞𝅘𝅥𝅘𝅥𝅯𝅘𝅥𝅱𝅘𝅥𝅯𝄞𝅘𝅥𝅯𝅘𝅥𝅯𝅘𝅥𝅘𝅥𝅱𝅘𝅥𝅯𝄢𝅘𝅥𝅯𝅘𝅥𝄞𝅘𝅥𝅯𝅘𝅥𝅯𝅘𝅥𝅘𝅥𝅱𝅘𝅥𝅯𝄢𝅘𝅥𝅯𝅘𝅥𝅘𝅥𝅱𝅘𝅥𝅘𝅥𝅯𝅘𝅥𝅘𝅥𝅱𝅘𝅥𝅯𝅘𝅥𝅘𝅥𝅯𝅘𝅥𝅱𝅘𝅥𝅘𝅥𝅘𝅥𝄞𝅘𝅥𝅘𝅥𝅱𝅘𝅥𝅯𝅘𝅥𝅘𝅥𝅘𝅥𝅯𝅘𝅥𝅯𝅘𝅥𝅘𝅥𝄢𝅘𝅥𝅯𝅘𝅥𝅱𝄞𝅘𝅥𝅯𝄢𝅘𝅥𝅯𝅘𝅥𝅯</p>
-  </div>
+      
+  <!-- <div class="searchbarre">
+    <form action="/api-no-commit" method="POST">
+        <input list="browsers" name="search" id="browser" placeholder="Rechercher">
+        <datalist id="browsers">
+            {{range .}}
+            <option value="{{.Name}}">
+                {{end}}
+        </datalist>
+        <button type="submit" hidden="true"></button>
+        <script src="./Java/Navbar.js"></script>
+    </form>
+  </div> -->
     {{ range $artists := . }}
     <div class="artist">
       <h2 class="ArtisteName"> {{ .Name }}</h2>
